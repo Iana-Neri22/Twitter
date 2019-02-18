@@ -14,15 +14,20 @@ function typing(){
             document.getElementById('sendTweet').disabled = true;
         }
 }
-
+/*A cor não limpa sem o refresh, arrumar isso*/
+/*Talvez usar o event listener ajude?*/ 
 function charcountupdate() {
     let str = document.getElementById("tweet").value;
     let characters = 140;
       let lng = characters - str.length;
       document.getElementById("contador").innerHTML = lng;
 
-      if(str.length >=120){
-          
+      if(str.length >=120 && str.length<=129){
+        contador.style.color = '#ffa500';
+      }
+
+      if(str.length >=130){
+        contador.style.color = '#ff0000';
       }
 
       if(str.length >= 140){

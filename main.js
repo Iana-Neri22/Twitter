@@ -41,7 +41,12 @@ const twittar = () =>{
     document.getElementById("myTweet").innerHTML = tweet;
     }
 
+const clean = () =>{
+    document.getElementById("tweet").value = " ";
+    document.getElementById('sendTweet').disabled = true;
+}
+
 let sendTweet= document.getElementById("sendTweet");
 sendTweet.addEventListener("click", twittar);
+sendTweet.addEventListener("click", clean);
 
-  

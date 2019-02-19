@@ -17,7 +17,7 @@ const counter = () => {
       document.getElementById("contador").innerHTML = lng;
 
       if(str.length <120){
-          contador.style.color = "#000";
+          contador.style.color = "#008000";
       }
 
       if(str.length >=120 && str.length<=129){
@@ -48,3 +48,11 @@ let sendTweet= document.getElementById("sendTweet");
 sendTweet.addEventListener("click", twittar);
 sendTweet.addEventListener("click", clean);
 
+function autoResize()
+    {
+        objTextArea = document.getElementById('tweet');
+        while (objTextArea.scrollHeight > objTextArea.offsetHeight)
+        {
+            objTextArea.rows += 1;
+        }
+    }

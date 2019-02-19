@@ -1,3 +1,30 @@
 #contador{
     color: #008000;
 }
+
+.header-container{
+    background-color: #1DA1F2;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+textarea {
+    resize: none;
+    width: 40%;
+    border-radius: 15px;    
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*#sendTweet{
+    border-radius: 50px;
+    background: #1DA1F2;
+    color: white;
+    font-size: 25px;
+}*/

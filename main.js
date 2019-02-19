@@ -1,19 +1,18 @@
-/*Linha de código que desativa o botão enviar*/ 
 document.getElementById('sendTweet').disabled = true;
+
 const typing = () => {
     const text = document.getElementById("tweet").value;
         if(text.length > 0 && text.length <=140) { 
             document.getElementById('sendTweet').disabled = false; 
         } 
         else{
-          document.getElementById('sendTweet').disabled = true;
+            document.getElementById('sendTweet').disabled = true; 
         }
-
 }
 
 const counter = () => {
     const str = document.getElementById("tweet").value;
-      let lng =  140 - str.length;
+    const lng =  140 - str.length;
       document.getElementById("contador").innerHTML = lng;
 
       if(str.length <120){
@@ -29,9 +28,18 @@ const counter = () => {
       } 
   }
 
+  const autoResize = () =>{
+        const textArea = document.getElementById('tweet');
+        while (textArea.scrollHeight > textArea.offsetHeight)
+        {
+            textArea.rows += 1;
+        }
+    }
+
 let tweet = document.getElementById("tweet");
 tweet.addEventListener("keyup", typing);
 tweet.addEventListener("keyup", counter);
+tweet.addEventListener("keydown", autoResize);
 
 const twittar = () =>{
     let tweet = document.getElementById("tweet").value;
@@ -44,31 +52,21 @@ const clean = () =>{
     document.getElementById("contador").innerHTML = 140;
 }
 
-let sendTweet= document.getElementById("sendTweet");
-sendTweet.addEventListener("click", twittar);
-sendTweet.addEventListener("click", clean);
-sendTweet.addEventListener("click", horario);
+/*Criar a variavel das horas aqui fora = retorno do horario*/ 
+const horario = () =>{
+    let data = new Date ();
+    let horas = data.getHours ();
+    let minutos = data.getMinutes ();
 
-function autoResize()
-    {
-        objTextArea = document.getElementById('tweet');
-        while (objTextArea.scrollHeight > objTextArea.offsetHeight)
-        {
-            objTextArea.rows += 1;
-        }
-    }
-
-function horario(){
-    var data = new Date ();
-    var horas = data.getHours ();
-    var minutos = data.getMinutes ();
-
-    if (horas < 10){
-        horas = "0" + horas;
-    }
     if (minutos < 10){
         minutos = "0" + minutos;
     }
 
-    document.getElementById("horario").innerHTML = horas + ":" + minutos
+    const horaTweet = document.getElementById("horario").innerHTML = horas + ":" + minutos
+    return horaTweet;
 }
+
+let sendTweet= document.getElementById("sendTweet");
+sendTweet.addEventListener("click", twittar);
+sendTweet.addEventListener("click", clean);
+sendTweet.addEventListener("click", horario);

@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Twitter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-   
+    <link rel="icon" href="imagens/twitter-logo.png">
 </head>
 <body>
-   <form>
-       <textarea name="" onkeydown="autoResize()" id="tweet" rows="10" placeholder="What's happening"></textarea>
+   <header class="header-container"><h1>Twitter</h1></header>
+
+   <form class="main">
+       <textarea name=""  id="tweet" rows="10" placeholder="What's happening"></textarea>
        <p id="contador">140</p>
        <input type="button" value="Tweet" id="sendTweet">
        <textarea name="" id="myTweet" cols="30" rows="10"></textarea>

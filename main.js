@@ -47,6 +47,7 @@ const clean = () =>{
 let sendTweet= document.getElementById("sendTweet");
 sendTweet.addEventListener("click", twittar);
 sendTweet.addEventListener("click", clean);
+sendTweet.addEventListener("click", horario);
 
 function autoResize()
     {
@@ -56,3 +57,18 @@ function autoResize()
             objTextArea.rows += 1;
         }
     }
+
+function horario(){
+    var data = new Date ();
+    var horas = data.getHours ();
+    var minutos = data.getMinutes ();
+
+    if (horas < 10){
+        horas = "0" + horas;
+    }
+    if (minutos < 10){
+        minutos = "0" + minutos;
+    }
+
+    document.getElementById("horario").innerHTML = horas + ":" + minutos
+}

@@ -1,11 +1,6 @@
 /*Linha de código que desativa o botão enviar*/ 
 document.getElementById('sendTweet').disabled = true;
-
-let tweet = document.getElementById("tweet");
-tweet.addEventListener("keyup", typing);
-tweet.addEventListener("keyup", charcountupdate);
-
-function typing(){
+const typing = () => {
     let texto = document.getElementById("tweet").value;
         if(texto.length > 0) { 
             document.getElementById('sendTweet').disabled = false; 
@@ -14,7 +9,7 @@ function typing(){
         }
 }
 
-function charcountupdate() {
+const counter = () => {
     let str = document.getElementById("tweet").value;
     let characters = 140;
       let lng = characters - str.length;
@@ -37,10 +32,16 @@ function charcountupdate() {
       }
   }
 
-let sendTweet= document.getElementById("sendTweet");
-sendTweet.addEventListener("click", twittar);
+let tweet = document.getElementById("tweet");
+tweet.addEventListener("keyup", typing);
+tweet.addEventListener("keyup", counter);
 
-  function twittar(){
+const twittar = () =>{
     let tweet = document.getElementById("tweet").value;
     document.getElementById("myTweet").innerHTML = tweet;
     }
+
+let sendTweet= document.getElementById("sendTweet");
+sendTweet.addEventListener("click", twittar);
+
+  

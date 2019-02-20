@@ -43,8 +43,6 @@ tweet.addEventListener("keyup", typing);
 tweet.addEventListener("keyup", counter);
 tweet.addEventListener("keydown", autoResize);
 
-
-
 const clean = () =>{
     document.getElementById("tweet").value = " ";
     document.getElementById('sendTweet').disabled = true;
@@ -65,12 +63,12 @@ const horario = () =>{
     return horaTweet;
 }
 
-function twittar() {
+const twittar = () =>{
     const tweet = document.getElementById("tweet").value;
     return tweet
     }
 
-function printarTweet(){
+const printarTweet = () =>{
 
         let campo = document.createElement("textarea");
         campo.textContent = twittar() + " " + horario()

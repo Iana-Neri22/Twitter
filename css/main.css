@@ -1,3 +1,7 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
 #contador{
     color: #008000;
 }
@@ -12,14 +16,17 @@
 
 textarea {
     resize: none;
-    width: 40%;
-    border-radius: 15px;    
+    width: 35%;
+    border-radius: 15px;
+    outline: none;    
+    font-size: 18px;
 }
 
 .main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #sendTweet{
@@ -27,4 +34,9 @@ textarea {
     background: #1DA1F2;
     color: white;
     font-size: 25px;
+}
+
+p{
+    display: flex;
+    flex-wrap: flex;
 }

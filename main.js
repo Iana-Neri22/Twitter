@@ -43,10 +43,7 @@ tweet.addEventListener("keyup", typing);
 tweet.addEventListener("keyup", counter);
 tweet.addEventListener("keydown", autoResize);
 
-const twittar = () =>{
-    const tweet = document.getElementById("tweet").value;
-    document.getElementById("myTweet").innerHTML = tweet;
-    }
+
 
 const clean = () =>{
     document.getElementById("tweet").value = " ";
@@ -68,13 +65,18 @@ const horario = () =>{
     return horaTweet;
 }
 
-const printarHorario = () =>{
-    document.querySelector("#horario").innerHTML = horario();
-}
+function twittar() {
+    const tweet = document.getElementById("tweet").value;
+    return tweet
+    }
 
+function printarTweet(){
 
+        let campo = document.createElement("textarea");
+        campo.textContent = twittar() + " " + horario()
+        
+        document.body.appendChild(campo)}
+        
 let sendTweet= document.getElementById("sendTweet");
-sendTweet.addEventListener("click", twittar);
+sendTweet.addEventListener("click", printarTweet);
 sendTweet.addEventListener("click", clean);
-sendTweet.addEventListener("click", horario);
-sendTweet.addEventListener("click", printarHorario);

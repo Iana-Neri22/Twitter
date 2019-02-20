@@ -22,9 +22,9 @@ textarea {
     align-items: center;
 }
 
-/*#sendTweet{
+#sendTweet{
     border-radius: 50px;
     background: #1DA1F2;
     color: white;
     font-size: 25px;
-}*/
+}

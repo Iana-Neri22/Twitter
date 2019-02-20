@@ -1,4 +1,5 @@
-document.getElementById('sendTweet').disabled = true;
+const disableButton = () => document.querySelector('#sendTweet').disabled = true;
+window.addEventListener("load", disableButton);
 
 const typing = () => {
     const text = document.getElementById("tweet").value;
@@ -36,13 +37,13 @@ const counter = () => {
         }
     }
 
-let tweet = document.getElementById("tweet");
+const tweet = document.querySelector('#tweet');
 tweet.addEventListener("keyup", typing);
 tweet.addEventListener("keyup", counter);
 tweet.addEventListener("keydown", autoResize);
 
 const twittar = () =>{
-    let tweet = document.getElementById("tweet").value;
+    const tweet = document.getElementById("tweet").value;
     document.getElementById("myTweet").innerHTML = tweet;
     }
 
@@ -52,21 +53,26 @@ const clean = () =>{
     document.getElementById("contador").innerHTML = 140;
 }
 
-/*Criar a variavel das horas aqui fora = retorno do horario*/ 
 const horario = () =>{
-    let data = new Date ();
-    let horas = data.getHours ();
-    let minutos = data.getMinutes ();
+    const data = new Date ();
+    const horas = data.getHours ();
+    const minutos = data.getMinutes ();
 
     if (minutos < 10){
         minutos = "0" + minutos;
     }
 
-    const horaTweet = document.getElementById("horario").innerHTML = horas + ":" + minutos
+    const horaTweet = horas + ":" + minutos
     return horaTweet;
 }
+
+const printarHorario = () =>{
+    document.querySelector("#horario").innerHTML = horario();
+}
+
 
 let sendTweet= document.getElementById("sendTweet");
 sendTweet.addEventListener("click", twittar);
 sendTweet.addEventListener("click", clean);
 sendTweet.addEventListener("click", horario);
+sendTweet.addEventListener("click", printarHorario);

@@ -13,19 +13,19 @@ const typing = () => {
 }
 
 const counter = () => {
-    const str = document.getElementById("tweet").value;
-    const lng =  140 - str.length;
+    const str = document.getElementById("tweet").value.length;
+    const lng =  140 - str;
       document.getElementById("contador").innerHTML = lng;
 
-      if(str.length <120){
+      if(str <120){
           contador.style.color = "#008000";
       }
 
-      if(str.length >=120 && str.length<=129){
+      if(str >=120 && str<=129){
         contador.style.color = '#ffa500';
       }
 
-      if(str.length >=130){
+      if(str >=130){
         contador.style.color = '#ff0000';
       } 
   }
@@ -52,6 +52,7 @@ const clean = () =>{
     document.getElementById("tweet").value = " ";
     document.getElementById('sendTweet').disabled = true;
     document.getElementById("contador").innerHTML = 140;
+    contador.style.color = "#008000"
 }
 
 const horario = () =>{

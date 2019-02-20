@@ -7,17 +7,18 @@ body{
 }
 
 .header-container{
-    background-color: #1DA1F2;
+    background-color: #1dc7f1;
     display: flex;
     justify-content: center;
     color: white;
     font-size: 40px;
-    height: 55px;
+    height: 85px;
+    width: 100%;
     align-items: center;
     margin-bottom: 30px;
 }
 
-textarea {
+.inputTwitter {
     resize: none;
     width: 35%;
     border-radius: 15px;
@@ -30,17 +31,24 @@ textarea {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
   
 }
 
-#sendTweet{
-    border-radius: 50px;
-    background: #1DA1F2;
+.botaoEnviar{
+    background: #1dc7f1;
     color: white;
     font-size: 25px;
+    cursor: pointer;
 }
 
 p{
     display: flex;
     flex-wrap: flex;
 }
+
+/*textarea{
+width: 30%;
+resize: none;
+height: 45px;
+}*/

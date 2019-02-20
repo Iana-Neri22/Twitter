@@ -31,12 +31,12 @@ const counter = () => {
   }
 
   const autoResize = () =>{
-        const textArea = document.getElementById('tweet');
-        while (textArea.scrollHeight > textArea.offsetHeight)
-        {
-            textArea.rows += 1;
-        }
+    const textArea = document.getElementById('tweet');
+    while (textArea.scrollHeight > textArea.offsetHeight)
+    {
+        textArea.rows += 1;
     }
+}
 
 const tweet = document.querySelector('#tweet');
 tweet.addEventListener("keyup", typing);
@@ -71,7 +71,7 @@ const twittar = () =>{
 const printarTweet = () =>{
 
         let campo = document.createElement("textarea");
-        campo.textContent = twittar() + " " + horario()
+        campo.textContent = horario() + " " + twittar()
         
         document.body.appendChild(campo)}
         

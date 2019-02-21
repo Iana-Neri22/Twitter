@@ -47,8 +47,13 @@ p{
     flex-wrap: flex;
 }
 
-/*textarea{
+.txtAreaTweet{
 width: 30%;
 resize: none;
-height: 45px;
-}*/
+height: 85px;
+margin-left: 175px;
+margin-top: 45px;
+border-radius: 15px;
+font-size: 18px;
+
+}

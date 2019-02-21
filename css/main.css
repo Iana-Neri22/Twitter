@@ -1,11 +1,11 @@
 body{
     font-family: 'Open Sans', sans-serif;
+    background: #c0deed
 }
 
-#contador{
+.contador{
     color: #008000;
 }
-
 .header-container{
     background-color: #1dc7f1;
     display: flex;
@@ -50,7 +50,7 @@ p{
 .txtAreaTweet{
 width: 30%;
 resize: none;
-height: 85px;
+height: 115px;
 margin-left: 175px;
 margin-top: 45px;
 border-radius: 15px;

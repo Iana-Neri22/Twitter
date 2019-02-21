@@ -17,17 +17,17 @@ const counter = () => {
     const lng =  140 - str;
       document.getElementById("contador").innerHTML = lng;
 
-      if(str <120){
-          contador.style.color = "#008000";
-      }
-
       if(str >=120 && str<=129){
         contador.style.color = '#ffa500';
       }
 
-      if(str >=130){
+      else if(str >=130){
         contador.style.color = '#ff0000';
       } 
+
+      else{
+        contador.style.color = "#008000"
+      }
   }
 
   const autoResize = () =>{

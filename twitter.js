@@ -59,6 +59,10 @@ const horario = () =>{
         minutos = "0" + minutos;
     }
 
+    if (horas < 10){
+        horas = "0" + horas;
+    }
+
     let horaTweet = horas + ":" + minutos
     return horaTweet;
 }
@@ -74,7 +78,7 @@ const printarTweet = () =>{
         campo.setAttribute("class", "txtAreaTweet");
         campo.textContent = horario() + " " + twittar()
         
-        document.body.appendChild(campo)}
+        document.getElementById("msg").appendChild(campo)}
         
 let sendTweet= document.getElementById("sendTweet");
 sendTweet.addEventListener("click", printarTweet);

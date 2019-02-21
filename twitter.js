@@ -71,8 +71,8 @@ const twittar = () =>{
 const printarTweet = () =>{
 
         let campo = document.createElement("textarea");
-        campo.textContent = horario() + " " + twittar()
         campo.setAttribute("class", "txtAreaTweet");
+        campo.textContent = horario() + " " + twittar()
         
         document.body.appendChild(campo)}
         

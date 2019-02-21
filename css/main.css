@@ -15,7 +15,7 @@ body{
     height: 85px;
     width: 100%;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 }
 
 .inputTwitter {
@@ -26,13 +26,10 @@ body{
     font-size: 18px;
 }
 
-.main{
+.msg{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-  
+    align-items: center;  
 }
 
 .botaoEnviar{
@@ -42,18 +39,14 @@ body{
     cursor: pointer;
 }
 
-p{
-    display: flex;
-    flex-wrap: flex;
-}
-
 .txtAreaTweet{
-width: 30%;
+width: 35%;
 resize: none;
 height: 115px;
-margin-left: 175px;
+display: flex;
+align-self: center;
+margin-left: 440px;
 margin-top: 45px;
 border-radius: 15px;
 font-size: 18px;
-
 }

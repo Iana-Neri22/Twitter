@@ -73,12 +73,14 @@ const twittar = () =>{
     }
 
 const printarTweet = () =>{
-
-        let campo = document.createElement("textarea");
-        campo.setAttribute("class", "txtAreaTweet");
-        campo.textContent = horario() + " " + twittar()
+    let lista = document.getElementById("aparecerTweets")
+    
+    let campo = document.createElement("textarea");
+    campo.setAttribute("class", "txtAreaTweet");
+    campo.textContent = horario() + " " + twittar()
         
-        document.getElementById("msg").appendChild(campo)}
+      
+    lista.insertBefore(campo, lista.childNodes[0])}
         
 let sendTweet= document.getElementById("sendTweet");
 sendTweet.addEventListener("click", printarTweet);

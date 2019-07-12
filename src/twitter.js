@@ -3,11 +3,8 @@ window.addEventListener("load", () => document.querySelector("#sendTweet").disab
 typing = () => {
   const text = document.getElementById("tweet").value;
   const button = document.querySelector("#sendTweet");
-  if (text.length > 0 && text.length <= 140) {
-    button.disabled = false;
-  } else {
-    button.disabled = true;
-  }
+
+  text.length > 0 && text.length <= 140 ? button.disabled = false : button.disabled = true; 
 };
 
 counter = () => {

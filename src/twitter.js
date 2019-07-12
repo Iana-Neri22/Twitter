@@ -51,10 +51,8 @@ horario = () => {
 
   if (horas < 10) {
     horas = "0" + horas;
-  }
-
-  let horaTweet = horas + ":" + minutos;
-  return horaTweet;
+  } 
+  return `${horas}:${minutos}`;
 };
 
 twittar = () => {
@@ -67,8 +65,7 @@ printTweet = () => {
 
   let campo = document.createElement("textarea");
   campo.setAttribute("class", "txtAreaTweet");
-  campo.textContent = horario() + " " + twittar();
-
+  campo.textContent = `${horario()} ${twittar()}`;
   lista.insertBefore(campo, lista.childNodes[0]);
 };
 

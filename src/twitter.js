@@ -1,8 +1,6 @@
-const disableButton = () =>
-  (document.querySelector("#sendTweet").disabled = true);
-window.addEventListener("load", disableButton);
+window.addEventListener("load", () => document.querySelector("#sendTweet").disabled = true);
 
-const typing = () => {
+typing = () => {
   const text = document.getElementById("tweet").value;
   const button = document.querySelector("#sendTweet");
   if (text.length > 0 && text.length <= 140) {
@@ -12,7 +10,7 @@ const typing = () => {
   }
 };
 
-const counter = () => {
+counter = () => {
   const str = document.getElementById("tweet").value.length;
   const lng = 140 - str;
   document.getElementById("contador").innerHTML = lng;
@@ -26,7 +24,7 @@ const counter = () => {
   }
 };
 
-const autoResize = () => {
+autoResize = () => {
   const textArea = document.getElementById("tweet");
   while (textArea.scrollHeight > textArea.offsetHeight) {
     textArea.rows += 1;
@@ -38,14 +36,14 @@ tweet.addEventListener("keyup", typing);
 tweet.addEventListener("keyup", counter);
 tweet.addEventListener("keydown", autoResize);
 
-const clean = () => {
+clean = () => {
   document.getElementById("tweet").value = " ";
   document.getElementById("sendTweet").disabled = true;
   document.getElementById("contador").innerHTML = 140;
   contador.style.color = "#008000";
 };
 
-const horario = () => {
+horario = () => {
   let data = new Date();
   let horas = data.getHours();
   let minutos = data.getMinutes();
@@ -62,12 +60,12 @@ const horario = () => {
   return horaTweet;
 };
 
-const twittar = () => {
+twittar = () => {
   const tweet = document.getElementById("tweet").value;
   return tweet;
 };
 
-const printTweet = () => {
+printTweet = () => {
   let lista = document.getElementById("showTweets");
 
   let campo = document.createElement("textarea");
